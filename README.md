@@ -133,3 +133,18 @@
   1. Fork this repo and clone it
   1. From the root dir run `yarn install`
   1. From the root dir run `yarn dev`
+
+  ## ⚠️ Common configuration issues
+
+### Missing `appName`
+The SDK requires an `appName` to be set during initialization.
+This value is shown to users during wallet interactions.
+
+### Invalid `chainId`
+Make sure `chainId` is a valid number corresponding to a supported network
+(e.g. `1` for Ethereum mainnet, `8453` for Base).
+
+### Incorrect `rpcUrl`
+If you provide a custom RPC URL, ensure it starts with `http://` or `https://`.
+Invalid URLs may cause silent connection failures.
+
